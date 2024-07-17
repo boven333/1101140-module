@@ -41,11 +41,8 @@ html {
     display: flex;
 }
 
-/* คลำส wrapper จะแสดงผลแบบ flex */
-
 .icon {
     text-align: center;
-    /* ก ำหนดให้แสดงตัวหนังสือตรงกลำง */
 }
 
 .wrapper-vertical {

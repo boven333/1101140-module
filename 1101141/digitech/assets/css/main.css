@@ -1,0 +1,454 @@
+/*โค้ดใน Lab Sheet ตั้งเเต่บรรทัดที่ 1-275*/
+@font-face {
+    font-family: 'sutregular';
+    src: url('../webfonts/SUT\ Regular\ ver\ 1.00.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+0E00–U+0E7F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: sutregular;
+    box-sizing: inherit;
+    line-height: 1;
+    list-style: none;
+}
+
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+body {
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #1a1241, #24235f, #2a3580, #2949a2, #1b5ec6);
+    font-size: 17pt;
+    font-weight: 300;
+    line-height: 1.65;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: dotted 1px;
+    color: inherit;
+}
+
+a:hover {
+    border-bottom-color: transparent;
+}
+
+p {
+    margin: 0 0 2em 0;
+    font-size: .90em;
+}
+
+p.content {
+    columns: 20em 2;
+    column-gap: 2em;
+    text-align: justify;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 0 .7em 0;
+    letter-spacing: -.025em;
+}
+
+h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+h2 {
+    color: #fff;
+}
+
+/* Button */
+.button {
+    appearance: none;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 300;
+    height: 2.75em;
+    line-height: 2.75em;
+    min-width: 9.25em;
+    padding: 0 1.5em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+/* Features */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% + 2em);
+    margin: 0 0 3em -2em;
+    padding: 0;
+    list-style: none;
+}
+
+.features li {
+    width: calc(33.33333% - 2em);
+    margin-left: 2em;
+    margin-top: 3em;
+    padding: 0;
+}
+
+/* Spotlight */
+.spotlight {
+    display: flex;
+    align-items: center;
+    margin: 0 0 2em 0;
+}
+
+.spotlight .image {
+    display: inline-block;
+    margin-left: 4em;
+    padding: 0.65em;
+    border-radius: 100%;
+    border: solid 1px;
+}
+
+.spotlight .image img {
+    display: block;
+    border-radius: 100%;
+    width: 16em;
+}
+
+@media screen and (max-width:980px) {
+    .spotlight {
+        flex-direction: column-reverse;
+        text-align: center
+    }
+
+    .spotlight .content {
+        flex: 0 1 auto;
+        width: 100%
+    }
+
+    .spotlight .content header.major h2:after {
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .spotlight .image {
+        flex: 0 1 auto;
+        margin-left: 0;
+        margin-bottom: 2em
+    }
+}
+
+@media screen and (max-width:736px) {
+    .spotlight .image {
+        padding: .35em
+    }
+
+    .spotlight .image img {
+        width: 12em
+    }
+}
+
+.spotlight .image {
+    border-color: rgba(255, 255, 255, .35)
+}
+
+#nav {
+    background-color: #fff;
+    color: #636363;
+    position: absolute;
+    width: 64em;
+    max-width: calc(100% - 4em);
+    padding: 1em;
+    background-color: #f7f7f7;
+    border-top-left-radius: .25em;
+    border-top-right-radius: .25em;
+    cursor: default;
+    text-align: center
+}
+
+#nav a:hover {
+    color: #636363
+}
+
+#nav+#main {
+    padding-top: 4.25em
+}
+
+#nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+#nav ul li {
+    display: inline-block;
+    margin: 0 .35em;
+    padding: 0;
+    vertical-align: middle
+}
+
+#nav ul li a {
+    display: inline-block;
+    height: 2.25em;
+    line-height: 2.25em;
+    padding: 0 1.25em;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 1px transparent
+}
+
+#nav ul li a:hover {
+    background-color: rgba(222, 222, 222, .25)
+}
+
+#nav ul li a.active {
+    background-color: #fff;
+    box-shadow: none
+}
+
+#main {
+    background-color: #fff;
+    color: #636363;
+    border-radius: .25em
+}
+
+#main a:hover {
+    color: #636363
+}
+
+#main h2 {
+    color: #636363
+}
+
+#main .button {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px #ddd;
+    color: #636363 !important
+}
+
+#main .button:hover {
+    background-color: rgba(222, 222, 222, .25)
+}
+
+#main .button:active {
+    background-color: rgba(222, 222, 222, .5)
+}
+
+#main .button.icon:before {
+    color: rgba(99, 99, 99, .25)
+}
+
+#main .button.primary {
+    background-color: #8cc9f0;
+    color: #fff !important;
+    box-shadow: none
+}
+
+#main .button.primary:hover {
+    background-color: #9acff2
+}
+
+#main .button.primary:active {
+    background-color: #7ec3ee
+}
+
+#main .button.primary.icon:before {
+    color: #fff !important
+}
+
+#main ul.alt li {
+    border-top-color: #ddd
+}
+
+#main dl dt {
+    color: #636363
+}
+
+
+#main .spotlight .image {
+    border-color: #ddd
+}
+
+#main>.main {
+    padding: 5em 5em 3em 5em;
+    border-top: solid 1px #ddd
+}
+
+#main>.main:first-child {
+    border-top: 0
+}
+
+#main>.main>.image.main:first-child {
+    margin: -5em 0 5em -5em;
+    width: calc(100% + 10em);
+    border-top-right-radius: .25em;
+    border-top-left-radius: .25em;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+#main>.main>.image.main:first-child img {
+    border-top-right-radius: .25em;
+    border-top-left-radius: .25em;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+@media screen and (max-width:1280px) {
+    #main>.main {
+        padding: 4em 4em 2em 4em
+    }
+
+    #main>.main>.image.main:first-child {
+        margin: -4em 0 4em -4em;
+        width: calc(100% + 8em)
+    }
+}
+
+@media screen and (max-width:980px) {
+    #main>.main {
+        padding: 4em 3em 2em 3em
+    }
+
+    #main>.main>.image.main:first-child {
+        margin: -4em 0 4em -3em;
+        width: calc(100% + 6em)
+    }
+}
+
+@media screen and (max-width:736px) {
+    #main>.main {
+        padding: 3em 2em 1em 2em
+    }
+
+    #main>.main>.image.main:first-child {
+        margin: -3em 0 2em -2em;
+        width: calc(100% + 4em)
+    }
+}
+
+@media screen and (max-width:480px) {
+    #main>.main {
+        padding: 3em 1.5em 1em 1.5em
+    }
+
+    #main>.main>.image.main:first-child {
+        margin: -3em 0 1.5em -1.5em;
+        width: calc(100% + 3em)
+    }
+}
+
+@media screen and (max-width:360px) {
+    #main {
+        border-radius: 0
+    }
+
+    #main>.main {
+        padding: 2.5em 1em .5em 1em
+    }
+
+    #main>.main>.image.main:first-child {
+        margin: -2.5em 0 1.5em -1em;
+        width: calc(100% + 2em);
+        border-radius: 0
+    }
+
+    #main>.main>.image.main:first-child img {
+        border-radius: 0
+    }
+}
+
+#footer {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 5em 5em 3em 5em;
+    width: calc(100% + 2em);
+    margin: 0 0 3em -2em
+}
+
+#footer>* {
+    width: calc(50% - 2em);
+    margin-left: 2em
+}
+
+@media screen and (max-width:1280px) {
+    #footer {
+        padding: 4em 4em 2em 4em
+    }
+}
+
+@media screen and (max-width:980px) {
+    #footer {
+        padding: 4em 3em 2em 3em;
+        display: block;
+        margin: 0 0 3em 0;
+        width: 100%
+    }
+
+    #footer>* {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 3em
+    }
+}
+
+@media screen and (max-width:736px) {
+    #footer {
+        padding: 3em 2em 1em 2em
+    }
+}
+
+@media screen and (max-width:480px) {
+    #footer {
+        padding: 3em 1.5em 1em 1.5em
+    }
+}
+
+@media screen and (max-width:480px) {
+    #footer {
+        padding: 2.5em 1em .5em 1em
+    }
+}
+
+#wrapper {
+    width: 64em;
+    max-width: calc(100% - 4em);
+    margin: 0 auto
+}
+
+@media screen and (max-width:480px) {
+    #wrapper {
+        max-width: calc(100% - 2em)
+    }
+}
+
+@media screen and (max-width:360px) {
+    #wrapper {
+        max-width: 100%
+    }
+}

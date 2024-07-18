@@ -1,47 +1,56 @@
-div {
-    font-size: 30pt;
-}
 .container {
-    color: #fdedb4;
+    display: grid;
+    grid-template-columns:150px 1fr;
+    grid-template-areas:
+        "header header"
+        "menu content"
+        "footer footer"
+}
 
+.container>* {
+   font-family: sans-serif;
+    color: #fdedb4;
+}
+
+div {
+    font-size: larger;
 }
 
 .header,
 .menu,
 .content,
 .footer {
-    padding: 5px 10px;
-
+    padding: 0 0 0 1rem;
 }
 
 .header {
+    grid-area: header;
     background-color: #a1cdb6;
-
-}
-
-.wrapper {
+    height: 4rem;
+    align-items: center;
     display: flex;
-
 }
 
 .menu {
+    grid-area: menu;
     display: flex;
-    width: 150px;
     background-color: #ef776e;
     align-items: center;
-    height: 800px;
-
+    height: 300pt;
 }
 
 .content {
+    grid-area: content;
     display: flex;
-    flex: 1;
     align-items: center;
     background-color: #f9cc6e;
 
 }
 
 .footer {
+    grid-area: footer;
     background-color: #a1cdb6;
-
+    height: 4rem;
+    align-items: center;
+    display: flex;
 }

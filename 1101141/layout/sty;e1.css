@@ -1,0 +1,42 @@
+.container {
+    color: #fdedb4;
+
+}
+
+.header,
+.menu,
+.content,
+.footer {
+    padding: 5px 10px;
+}
+
+.header {
+    background-color: #a1cdb6;
+
+}
+
+.wrapper {
+    display: flex;
+
+}
+
+.menu {
+    display: flex;
+    width: 150px;
+    background-color: #ef776e;
+    align-items: center;
+    height: 300px;
+
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background-color: #f9cc6e;
+
+}
+
+.footer {
+    background-color: #a1cdb6;
+}

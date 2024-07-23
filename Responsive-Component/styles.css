@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.menu {
+    background-color: #5995da;
+    height: 80px;
+}
+
+.header {
+    background-color: #b2d6ff;
+}
+
+.content {
+    background-color: #eaedf0;
+    height: 600px;
+}
+
+.sign-up {
+    background-color: #d6e9fe;
+}
+
+.feature-1 {
+    background-color: #f5cf8e;
+}
+
+.feature-2 {
+    background-color: #f09a9d;
+}
+
+.feature-3 {
+    background-color: #c8c6fa;
+}
+
+/* Mobile */
+@media only screen and (max-width: 400px) {
+    body {
+        background-color: #f09a9d;
+    }
+
+    .content {
+        height: 15rem;
+    }
+
+    .header,
+    .sign-up,
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        height: 7rem;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+        background-color: #f5cf8e;
+    }
+
+    .header {
+        height: 7rem;
+    }
+
+    .content {
+        height: 25rem;
+    }
+
+    .sign-up,
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        width: 50%;
+        height: 12rem;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 961px) {
+    body {
+        background-color: #b2d6ff;
+    }
+
+    .header {
+        height: 400px;
+    }
+    .desk_feat {
+        display: flex;
+    }
+    .sign-up {
+        order: 1;
+    }
+    .content {
+        order: 2;
+    }
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        width: 33.3%;
+    }
+}
+

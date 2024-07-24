@@ -25,6 +25,10 @@ input[type=button], input[type=submit], input[type=reset] {
   cursor: pointer;
 }
 
+html {
+  overflow: hidden;
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -88,10 +92,12 @@ body, html {
 }
 
 .contact {
-  background: url("./assets/contact.jpg");
+  background-image: url(./assets/contact.jpg);
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 70%;
 }
 
 .wrapper {
@@ -100,8 +106,9 @@ body, html {
 
 .wrapper-vertical {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
+
 
 .item{
   padding: 2%;
@@ -112,10 +119,27 @@ body, html {
   opacity: 70%;
 }
 
-.icon{
+.icon {
   text-align: center;
 }
 
+.zoom-icon {
+  transition: transform 0.2s;
+}
+
+.zoom-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 10px grey, 0px 10px 10px lightgrey;
+}
+
+.zoom-icon > h2 {
+  transition: transform 0.2s;
+}
+
+.zoom-icon > h2:hover {
+  transform: scale(1.2);
+  text-shadow: 0px 3px 3px grey, 0px 3px 3px lightgrey;
+}
 
 .menu {
   display: flex;

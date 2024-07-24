@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #h1_1 {
+            text-shadow: 5px 5px 10px red;
+        }
+
+        #h1_2 {
+            color: #fff;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        .box {
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: yellow;
+            box-shadow: 10px 10px 5px grey;
+        }
+
+        .polaroid {
+            width: 500px;
+            height: 400px;
+            box-shadow: 0px 10px 10px grey, 0px 10px 10px lightgrey;
+        }
+
+        .page {
+            margin: 0 auto;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <h1 id="h1_1">Text shadow effect</h1>
+
+        <h1 id="h1_2">Text shadow effect</h1>
+        <br />
+
+        <div class="box">
+            This is a div elment with a box shadow
+        </div>
+
+        <br />
+
+        <h2>
+            Polaroid Images /Cards
+        </h2>
+        <br />
+        <div class="polaroid">
+            <img src="../dummy001.jpg" style="width: 100%;" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

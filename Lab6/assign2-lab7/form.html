@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web UI - JS Form</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="mt-4 mb-4">
+            <form class="form" role="form" action="#" method="post"> 
+                <fieldset>
+                    <legend>Register</legend>
+
+                    <div class="form-group">
+                        <label for="register_email">Email (*)</label>
+                        <input class="form-control" type="email" id="register_email" name="register_email"
+                            placeholder="Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register_password">Password (*)</label>
+                        <input class="form-control" type="password" id="register_password" name="register_password"
+                            placeholder="Minimum 8 characters" value="" required onkeyup="signup_form_password_check();">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register_password">Confirm Password (*)</label>
+                        <input class="form-control" type="password" id="register_confirm_password"
+                            name="register_confirm_password" placeholder="Confirm Password" required disabled
+                            onkeyup="match_check();">
+                    </div>
+
+                    <div class="password-conditions">
+                        <div id="password_character_count">
+                            Use 8 or more characters
+                        </div>
+                        <div id="message">
+                            Matched
+                        </div>
+                    </div>
+                </fieldset>
+
+                <hr>
+
+                <div class="terms">
+                    <div class="form-group form-check">
+
+                        <input id="register_agree_to_terms" type="checkbox" class="formcheck-input" disabled
+                            onclick='match_check();'>
+
+                        <label class="form-check-label" for="register_agree_to_terms">
+                            I agree to the <a href='#' title='Term of Use'>Terms of use</a>, <a href='#'
+                                title='Privacy Policy' target='_blank' rel='noopener noreferrer'>Privacy
+                                Policy</a>, and <a href='cookie-policy' title='Cookie Policy' target='_blank'
+                                rel='noopener noreferrer'>Cookie Policy</a>.</label>
+                    </div>
+
+                    By checking this checkbox and signing up, you agree to the <ahref='#' title='Termof Use' target='_blank' rel='noopener noreferrer'>Terms of Use</a>, 
+                    <a href='#' title='Privacy Policy' target='_blank'  rel='noopener noreferrer'>PrivacyPolicy</a>, 
+                    and <a href='#' title='Cookie Policy' target='_blank' rel='noopenernoreferrer'>Cookie Policy</a>.
+                </div>
+                <button type="submit" name="submit" id="signup_button" class="btn btn-primary" disabled >Sign up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/form.js"></script>
+</body>
+
+</html>

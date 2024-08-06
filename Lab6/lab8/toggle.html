@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .sidenav {
+            background: #111;
+            overflow-x: hidden;
+            padding: 60px 0 0 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+            width: 0;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav .closebtn {
+            font-size: 36px;
+            margin: 0 0 0 50px;
+            position: absolute;
+            top: 0;
+            right: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+        <a href="#">เกี่ยวกับโครงการ</a>
+        <a href="#">หลักสูตรที่เปิดสอน</a>
+        <a href="#">การรับสมัคร</a>
+        <a href="#">บุคลากร</a>
+        <a href="#">ติดต่อเรา</a>
+    </div>
+    <h2>เปิด/ปิดเมนู</h2>
+    <p>กดปุ่ม "เปิด" เพื่อแสดงเมนู</p>
+    <button id="toggleMenu">&#9776; เปิด</button>
+    <script src="./js/toggle.js"></script>
+</body>
+
+</html>

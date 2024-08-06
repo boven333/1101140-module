@@ -1,0 +1,178 @@
+/* ========================== banner ========================== */
+.banner_container {
+    text-align: center;
+}
+
+.banner {
+    background-image: url("../images/cover-1900x542.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 27rem;
+    padding: 17rem 0 2rem;
+}
+
+.b {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: -27rem;
+    width: 100%;
+    height: 27rem;
+}
+
+.banner_content {
+    font-family: $sutfont;
+    color: $white;
+}
+
+.text-head {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.text-contentm {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin: 0;
+    margin-top: 3vw;
+}
+
+/* ========================== banner ========================== */
+
+/* ========================= content ========================== */
+.occup-grid {
+    @include grid-default(60%, 1fr);
+}
+
+.highlight-grid {
+    @include grid-default(1fr, 60%);
+}
+
+.header_content {
+    font-family: $sutfont;
+    width: fit-content;
+    height: auto;
+    margin: 0 0 3vh;
+    padding: 0.7vh 0;
+    text-align: center;
+    color: $white;
+    background: linear-gradient(90deg,
+            $red_grad1,
+            $red_grad2,
+            $red_grad3,
+            $red_grad4,
+            $red_grad5 );
+    @include border-radius(3vh);
+    @include box-shadow(2px, 8px, 14px, 0px, rgba(62, 75, 73, 0.25));
+
+    h3 {
+        font-size: 1.3rem;
+        margin: 0 0.5rem;
+    }
+}
+
+.box1 {
+    @include box-default(0px, 10px, 10px, 0px);
+}
+
+.box2 {
+    @include box-default(10px, 0px, 0px, 10px);
+}
+
+.flex-row {
+    font-family: $sutfont;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem 0rem 8rem;
+
+    div {
+        width: 30%;
+        margin: 2rem 1rem;
+        padding: 0 1.5rem;
+        text-align: center;
+    }
+
+    img {
+        width: 60%;
+        @include border-radius(50%);
+        @include box-shadow(4px, 8px, 12px, 7px, hsla(171, 9%, 27%, 0.25));
+
+        &:hover {
+            @include transition(0.7s);
+            @include transform(rotate(360deg));
+        }
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        color: $white;
+        margin: 0.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        color: $white;
+        margin: 0.5rem 0;
+    }
+
+    a {
+        font-size: 1.1rem;
+        color: $white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background: linear-gradient(90deg,
+                $red_grad1,
+                $red_grad2,
+                $red_grad3,
+                $red_grad4,
+                $red_grad5 );
+        @include border-radius(6px);
+    }
+}
+
+/* ========================= content ========================== */
+
+/* ========================== footer ========================== */
+footer {
+    width: 100%;
+    height: auto;
+    background: #1f1f1f;
+    }
+    .footer_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+    .contact_us {
+    font-family: $sutfont;
+    color: $white;
+    text-align: left;
+    padding: 6rem 0 4rem 0;
+    margin-left: 10rem;
+    h2 {
+    margin-bottom: 15px;
+    }
+    h3 {
+    line-height: 1.5rem;
+    a {
+    text-decoration: none;
+    color: $white;
+    }
+    }
+    p {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin-bottom: 15px;
+    line-height: 1.5rem;
+    }
+    }
+    .facebookpage {
+    padding: 1rem;
+    justify-self: center;
+    }
+    /* =============x============= footer ============x============== */

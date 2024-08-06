@@ -1,0 +1,151 @@
+@use './variables' as *;
+
+// card
+
+@mixin card-style {
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@mixin card-hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+@mixin bg-card {
+    background: url(../../assets/bg-card.jpeg);
+    background-attachment: fixed;
+}
+
+// button
+@mixin button-style {
+    display: inline-block;
+    width: 20vh;
+    padding: 10px;
+    background-color: #fff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@mixin button-hover {
+    background-color: #f4f4f4;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+@mixin button-active {
+    background-color: #6200ea;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+// button
+@mixin header-style{
+    font-family:  $font-regular, cursive;
+    font-size: 15vmin;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 0.075ch;
+    color: hsl(0 0% 99%);
+    text-align: center;
+    --light-pos-x: 1; /* left: -1, center: 0, right: 1 */
+    --light-pos-y: -1; /* top: -1, center: 0, bottom: 1 */
+    
+    --rim-size: .02ch;
+    --shadow-offset: .2ch;
+    --shadow-blur: .1ch;
+    text-shadow: 
+      calc(max(var(--rim-size), 1px) * var(--light-pos-x)) calc(max(var(--rim-size), 1px) * var(--light-pos-y)) hsl(0 0% 100%),
+      calc(max(var(--rim-size), 1px) * var(--light-pos-x) * -1) calc(max(var(--rim-size), 1px) * var(--light-pos-y) * -1) hsl(0 0% 80%),
+      calc(var(--shadow-offset) * var(--light-pos-x) * -1) calc(var(--shadow-offset) * var(--light-pos-y) * -1) var(--shadow-blur) hsl(0 0% 70% / .75) 
+}
+
+@mixin header-style-mobile{
+    font-family:  $font-regular, cursive;
+    font-size: 40px;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 0.075ch;
+    color: hsl(0 0% 99%);
+    text-align: center;
+    --light-pos-x: 1; /* left: -1, center: 0, right: 1 */
+    --light-pos-y: -1; /* top: -1, center: 0, bottom: 1 */
+    
+    --rim-size: .02ch;
+    --shadow-offset: .2ch;
+    --shadow-blur: .1ch;
+    text-shadow: 
+      calc(max(var(--rim-size), 1px) * var(--light-pos-x)) calc(max(var(--rim-size), 1px) * var(--light-pos-y)) hsl(0 0% 100%),
+      calc(max(var(--rim-size), 1px) * var(--light-pos-x) * -1) calc(max(var(--rim-size), 1px) * var(--light-pos-y) * -1) hsl(0 0% 80%),
+      calc(var(--shadow-offset) * var(--light-pos-x) * -1) calc(var(--shadow-offset) * var(--light-pos-y) * -1) var(--shadow-blur) hsl(0 0% 70% / .75) 
+}
+
+// card-btn 
+@mixin card-btn {
+    display: inline-block;
+    width: 15vh;
+    padding: 10px;
+    background-color: #fff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+@mixin card-btn-hover {
+    background-color: #fff;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+// content 
+
+@mixin content-size {
+    height: 50%;
+}
+
+@mixin img-content {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 16px;
+}
+
+@mixin bg-content {
+    background: url(../../assets/bg-ceontent.webp);
+    background-attachment: fixed;
+}
+
+//nav 
+@mixin bg-nav {
+    background: url(../../assets/nav.webp);
+    background-attachment: fixed;
+}
+
+// header 
+@mixin bg-header {
+    background: url(../../assets/pexels-photo-1854600.webp);
+    background-attachment: fixed;
+}
+
+//footer 
+@mixin footer-header {
+    border-left: 5px solid rgb(95, 97, 200);
+    padding: 0 0 0 5px;
+}

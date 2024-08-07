@@ -16,31 +16,23 @@ $(document).ready(function () {
         let scrollTop = $(window).scrollTop();
         if ((scrollTop >= triggerTop) && (scrollTop <= (triggerTop + triggerHeight))) {
             $('#top_reach').text('Yes');
+            
         } else {
             $('#top_reach').text('No');
         }
-    }
 
-    // Update positions on scroll and resize
+       let carWidth = $('#car_video').width();
+       if (scrollTop > triggerPosition.top) {
+            let newWidth = carWidth - (carWidth * 0.01);
+            $('#car_video').width(newWidth);
+       } else {
+            $('#car_video').width(1100);
+       }
+ console.log(scrollTop);
+
+    }
     $(window).on('scroll resize', function () {
         updatePositions();
     });
     updatePositions();
-
-    // Resize video
-    $("#video-resize").click(function () {
-        $("#car_video").animate({
-            left: '250px',
-            height: '-=150px',
-            width: '-=150px'
-        });
-    });
-
-    $("#video-plus").click(function () {
-        $("#car_video").animate({
-            left: '250px',
-            height: '+=150px',
-            width: '+=150px'
-        });
-    });
 });
